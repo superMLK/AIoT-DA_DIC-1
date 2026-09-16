@@ -1,4 +1,4 @@
-# AIoT-DA 課程 — L2 個人儀表板專案說明文件
+# AIoT-DA 課程 — DIC-1（Do in Class 1）專案說明文件
 
 > **課程名稱**：物聯網應用與資料分析（AIoT & Data Analytics, AIoT-DA）
 > **課堂實作**：L2 練習 — 個人資訊儀表板（Personal Dashboard）
