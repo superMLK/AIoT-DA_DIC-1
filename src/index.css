@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
+  background: radial-gradient(circle at 20% 0%, #1a1a3d 0%, #0a0a1a 55%, #0a0a1a 100%);
+  color: #e8eaf6;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 48px;
+  gap: 16px;
+}
+
+.topbar {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.weather-chip {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(180deg, rgba(30, 30, 60, 0.6), rgba(15, 15, 35, 0.6));
+  border: 1px solid rgba(100, 150, 255, 0.25);
+  border-radius: 28px;
+  padding: 28px 24px;
+  box-shadow: 0 0 40px rgba(60, 100, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6a8dff, #a06afb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.header-text h1 {
+  margin: 6px 0 2px;
+  font-size: 1.5rem;
+}
+
+.greeting-pill {
+  display: inline-block;
+  background: rgba(120, 200, 255, 0.15);
+  color: #7dd8ff;
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 0.75rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: #a0a8c0;
+  font-size: 0.85rem;
+}
+
+.clock-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.clock-track {
+  stroke: rgba(255, 255, 255, 0.08);
+}
+
+.clock-progress {
+  stroke: #4ad8ff;
+  transition: stroke-dashoffset 0.3s linear;
+  filter: drop-shadow(0 0 6px rgba(74, 216, 255, 0.6));
+}
+
+.clock-center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.clock-digits {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.clock-digits .colon {
+  color: #4ad8ff;
+}
+
+.clock-digits .ampm {
+  font-size: 0.9rem;
+  margin-left: 6px;
+  color: #a0a8c0;
+}
+
+.clock-labels {
+  display: flex;
+  gap: 22px;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: #7a819c;
+}
+
+.unix-chip {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.7rem;
+  color: #9aa2c0;
+  font-family: monospace;
+}
+
+.date-full {
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.meta-chip {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 0.75rem;
+  color: #c0c6e0;
+}
+
+.action-row {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e8eaf6;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.info-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.85rem;
+}
+
+.info-label {
+  color: #8890ac;
+  flex-shrink: 0;
+}
+
+.info-value {
+  text-align: right;
+  color: #e8eaf6;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+}
+
+.toggle-group {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  padding: 3px;
+}
+
+.toggle-btn {
+  border: none;
+  background: transparent;
+  color: #8890ac;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: #4ad8ff;
+  color: #0a0a1a;
+  font-weight: 700;
+}
+
+.copy-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e8eaf6;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
